@@ -39,82 +39,90 @@ export default function Jobpost() {
     <div className="container-fluid py-1 px-5">
       <h1>Post a Job</h1>
       <form className="mt-2" onSubmit={handleSubmit}>
-        <label htmlFor="jobtitle">Job Title:</label>
-        <input
-          className="form-control mt-1 mb-3"
-          type="text"
-          id="jobtitle"
-          value={jobInput.jobtitle}
-          onChange={handleChange}
-          placeholder="e.g. Frontend Developer"
-        />
+  <label htmlFor="jobtitle">Job Title:</label>
+  <input
+    className="form-control mt-1 mb-3"
+    type="text"
+    id="jobtitle"
+    value={jobInput.jobtitle}
+    onChange={handleChange}
+    placeholder="e.g. Frontend Developer"
+    required
+  />
 
-        <label htmlFor="companyname">Company Name:</label>
-        <input
-          className="form-control mt-1 mb-3"
-          type="text"
-          id="companyname"
-          value={jobInput.companyname}
-          onChange={handleChange}
-          placeholder="e.g. TechSpark Solutions"
-        />
+  <label htmlFor="companyname">Company Name:</label>
+  <input
+    className="form-control mt-1 mb-3"
+    type="text"
+    id="companyname"
+    value={jobInput.companyname}
+    onChange={handleChange}
+    placeholder="e.g. TechSpark Solutions"
+    required
+  />
 
-        <label htmlFor="location">Location:</label>
-        <input
-          className="form-control mt-1 mb-3"
-          type="text"
-          id="location"
-          value={jobInput.location}
-          onChange={handleChange}
-          placeholder="e.g. Mumbai"
-        />
+  <label htmlFor="location">Location:</label>
+  <input
+    className="form-control mt-1 mb-3"
+    type="text"
+    id="location"
+    value={jobInput.location}
+    onChange={handleChange}
+    placeholder="e.g. Mumbai"
+    required
+  />
 
-        <label htmlFor="salary">Salary:</label>
-        <input
-          className="form-control mt-1 mb-3"
-          type="number"
-          id="salary"
-          value={jobInput.salary}
-          onChange={handleChange}
-          placeholder="e.g. ₹8,00,000 per annum"
-        />
+  <label htmlFor="salary">Salary:</label>
+  <input
+    className="form-control mt-1 mb-3"
+    type="number"
+    id="salary"
+    value={jobInput.salary}
+    onChange={handleChange}
+    placeholder="e.g. ₹8,00,000 per annum"
+    required
+  />
 
-        <label htmlFor="jobtype">Job Type:</label>
-        <select
-          className="form-select mt-1 mb-3"
-          id="jobtype"
-          value={jobInput.jobtype}
-          onChange={handleChange}
-        >
-          <option value="">Select Job Type</option>
-          <option value="Full-time (On-site)">Full-time (On-site)</option>
-          <option value="Part-time (On-site)">Part-time (On-site)</option>
-          <option value="Full-time (Remote)">Full-time (Remote)</option>
-          <option value="Part-time (Remote)">Part-time (Remote)</option>
-        </select>
+  <label htmlFor="jobtype">Job Type:</label>
+  <select
+    className="form-select mt-1 mb-3"
+    id="jobtype"
+    value={jobInput.jobtype}
+    onChange={handleChange}
+    required
+  >
+    <option value="">Select Job Type</option>
+    <option value="Full-time (On-site)">Full-time (On-site)</option>
+    <option value="Part-time (On-site)">Part-time (On-site)</option>
+    <option value="Full-time (Remote)">Full-time (Remote)</option>
+    <option value="Part-time (Remote)">Part-time (Remote)</option>
+  </select>
 
-        <label htmlFor="jobdescription">Job Description:</label>
-        <textarea
-          className="form-control mt-1 mb-3"
-          id="jobdescription"
-          value={jobInput.jobdescription}
-          onChange={handleChange}
-          placeholder="Briefly describe the role..."
-        />
+  <label htmlFor="jobdescription">Job Description:</label>
+  <textarea
+    className="form-control mt-1 mb-3"
+    id="jobdescription"
+    value={jobInput.jobdescription}
+    onChange={handleChange}
+    placeholder="Briefly describe the role..."
+    required
+  />
 
-        <label htmlFor="jobqualification">Job Qualification:</label>
-        <textarea
-          className="form-control mt-1 mb-2"
-          id="jobqualification"
-          value={jobInput.jobqualification}
-          onChange={handleChange}
-          placeholder="Mention degrees, certifications, or skills required..."
-        />
+  <label htmlFor="jobqualification">Job Qualification:</label>
+  <textarea
+    className="form-control mt-1 mb-2"
+    id="jobqualification"
+    value={jobInput.jobqualification}
+    onChange={handleChange}
+    placeholder="Mention degrees, certifications, or skills required..."
+    required
+  />
 
-        <button type="submit" className="btn btn-primary mt-2">
-          Post Job
-        </button>
-      </form>
+  <button type="submit" className="btn btn-primary mt-2">
+    Post Job
+  </button>
+</form>
+
       {jobAddToast && (
   <div
     className="toast-container position-fixed bottom-0 end-0 p-3"
