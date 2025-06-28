@@ -1,0 +1,12 @@
+
+.navbar {
+  background: #007FFF !important;
+}
+
+.container-fluid {
+  padding: 0 70px;
+}
+
+label {
+  font-weight: 500;
+}
