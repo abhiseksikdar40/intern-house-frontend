@@ -15,9 +15,9 @@ export default function Joblistings() {
     : [];
 
   return (
-    <div className="container py-4">
+    <div className="container-fluid py-4">
       {/* Search */}
-      <div className="mb-4 mx-3" style={{ maxWidth: "600px" }}>
+      <div className="mb-4" style={{ maxWidth: "600px" }}>
         <input
           type="text"
           placeholder="Search by job title..."
@@ -27,7 +27,7 @@ export default function Joblistings() {
         />
       </div>
 
-      <h2 className="mb-4 mx-3">All Jobs</h2>
+      <h2 className="mb-4">All Jobs</h2>
 
       {/* Loading */}
       {loading && (
@@ -50,14 +50,14 @@ export default function Joblistings() {
       )}
 
       {/* Jobs Grid */}
-      <div className="row gx-2 gy-1">
+      <div className="row gx-4 gy-1">
         {!loading &&
           filteredJobs.map((job) => (
             <div
-              className="col-lg-4 col-md-6 mb-2 d-flex justify-content-center"
+              className="col-md-4 mb-2 d-flex justify-content-center"
               key={job._id}
             >
-              <div className="card shadow p-3 w-100" style={{ maxWidth: "380px" }}>
+              <div className="card shadow p-4 w-100 me-3">
                 <div className="card-body">
                   <h5 className="card-title">{job.jobtitle}</h5>
                   <p className="card-text">
@@ -68,12 +68,12 @@ export default function Joblistings() {
                   <div>
                     <Link
                       to={`/joblistings/${job._id}`}
-                      className="btn btn-primary mb-2 me-2 px-4"
+                      className="btn btn-primary mb-2 me-2 px-5"
                     >
                       See Details
                     </Link>
                     <button
-                      className="btn btn-danger px-4 mb-2"
+                      className="btn btn-danger px-5 mb-2"
                       onClick={() => deletejob(job._id, refetch)}
                     >
                       Delete
