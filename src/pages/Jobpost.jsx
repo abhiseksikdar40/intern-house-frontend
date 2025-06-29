@@ -37,11 +37,11 @@ export default function Jobpost() {
 
   return (
     <div className="container-fluid py-1 px-5">
-      <h1>Post a Job</h1>
+      <h1 className="fs-2">Post a Job</h1>
       <form className="mt-2" onSubmit={handleSubmit}>
-  <label htmlFor="jobtitle">Job Title:</label>
+  <label className="mt-1" htmlFor="jobtitle">Job Title:</label>
   <input
-    className="form-control mt-1 mb-3"
+    className="form-control mt-1"
     type="text"
     id="jobtitle"
     value={jobInput.jobtitle}
@@ -50,9 +50,9 @@ export default function Jobpost() {
     required
   />
 
-  <label htmlFor="companyname">Company Name:</label>
+  <label className="mt-1" htmlFor="companyname">Company Name:</label>
   <input
-    className="form-control mt-1 mb-3"
+    className="form-control mt-1"
     type="text"
     id="companyname"
     value={jobInput.companyname}
@@ -61,9 +61,9 @@ export default function Jobpost() {
     required
   />
 
-  <label htmlFor="location">Location:</label>
+  <label className="mt-1" htmlFor="location">Location:</label>
   <input
-    className="form-control mt-1 mb-3"
+    className="form-control mt-1"
     type="text"
     id="location"
     value={jobInput.location}
@@ -72,9 +72,9 @@ export default function Jobpost() {
     required
   />
 
-  <label htmlFor="salary">Salary:</label>
+  <label className="mt-1" htmlFor="salary">Salary:</label>
   <input
-    className="form-control mt-1 mb-3"
+    className="form-control mt-1"
     type="number"
     id="salary"
     value={jobInput.salary}
@@ -83,9 +83,9 @@ export default function Jobpost() {
     required
   />
 
-  <label htmlFor="jobtype">Job Type:</label>
+  <label className="mt-1" htmlFor="jobtype">Job Type:</label>
   <select
-    className="form-select mt-1 mb-3"
+    className="form-select mt-1"
     id="jobtype"
     value={jobInput.jobtype}
     onChange={handleChange}
@@ -98,9 +98,9 @@ export default function Jobpost() {
     <option value="Part-time (Remote)">Part-time (Remote)</option>
   </select>
 
-  <label htmlFor="jobdescription">Job Description:</label>
+  <label className="mt-1" htmlFor="jobdescription">Job Description:</label>
   <textarea
-    className="form-control mt-1 mb-3"
+    className="form-control mt-1"
     id="jobdescription"
     value={jobInput.jobdescription}
     onChange={handleChange}
@@ -108,9 +108,9 @@ export default function Jobpost() {
     required
   />
 
-  <label htmlFor="jobqualification">Job Qualification:</label>
+  <label className="mt-1" htmlFor="jobqualification">Job Qualification:</label>
   <textarea
-    className="form-control mt-1 mb-2"
+    className="form-control mt-1"
     id="jobqualification"
     value={jobInput.jobqualification}
     onChange={handleChange}
