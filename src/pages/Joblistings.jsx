@@ -15,9 +15,9 @@ export default function Joblistings() {
     : [];
 
   return (
-    <div className="container-fluid py-4">
+    <div className="container-fluid py-2">
       {/* Search */}
-      <div className="mb-4" style={{ maxWidth: "600px" }}>
+      <div className="mb-1" style={{ maxWidth: "600px" }}>
         <input
           type="text"
           placeholder="Search by job title..."
@@ -27,7 +27,7 @@ export default function Joblistings() {
         />
       </div>
 
-      <h2 className="mb-4">All Jobs</h2>
+      <h2 className="mb-2">All Jobs</h2>
 
       {/* Loading */}
       {loading && (
