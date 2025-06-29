@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
-      <div className="container-fluid py-1">
+      <div className="container-fluid">
         <NavLink className="navbar-brand text-light fw-bold" to="/joblistings">
           INTERN HOUSE
         </NavLink>
