@@ -26,8 +26,8 @@ export default function Jobdetails() {
           <p className="mb-1"><strong>Location:</strong> {job.location}</p>
           <p className="mb-1"><strong>Job Type:</strong> {job.jobtype}</p>
           <p className="mb-1"><strong>Salary:</strong> ₹{job.salary.toLocaleString()}</p>
-          <p className="mb-1"><strong>Job Description:</strong> {job.jobdescription}</p>
-          <p className="mb-1"><strong>Job Qualifications:</strong></p>
+          <p className="mb-1"><strong>Description:</strong> {job.jobdescription}</p>
+          <p className="mb-1"><strong>Qualifications:</strong></p>
           <ol>
             {job.jobqualification.split(", ").map((q, index) => (
               <li key={index}>{q.trim()}</li>
